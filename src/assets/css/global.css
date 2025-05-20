@@ -1,6 +1,6 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
-/* global.css */
+/* CSS GLOBAL */
 body {
   margin: 0;
   font-family: 'Lexend', sans-serif;
@@ -12,6 +12,7 @@ a {
   color: inherit;
 }
 
+/* === LAYOUT === */
 /* === ESTRUCTURA GENERAL === */
 .homepage-grid {
   display: grid;
@@ -97,7 +98,7 @@ a {
 }
 
 .auth-bar
-.dropdown-menu a {
+.dropdown-menu Link {
   display: block;
   text-decoration: none;
   color: #444444;
@@ -109,7 +110,7 @@ a {
 }
 
 .auth-bar
-.dropdown-menu a:hover {
+.dropdown-menu Link:hover {
   background-color: #f0f4ff;
   border-radius: 6px;
 }
@@ -241,6 +242,7 @@ a {
   padding: 0.5rem 2rem;
   gap: 1.5rem;
   align-items: center;
+  justify-items: center;
 }
 
 .footer__logo {

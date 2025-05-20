@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../assets/css/global.css'
 import '../assets/css/home.css'
 import logo from '../assets/images/logo1.svg'
@@ -22,8 +23,8 @@ function Layout({ children, menuOpen, setMenuOpen }) {
             <div className="dropdown">
               <button className="dropdown-toggle">Iniciar sesión ▾</button>
               <div className="dropdown-menu">
-                <a href="#">Afiliado</a><br/>
-                <a href="#">Profesional</a>
+                <Link to="/login-afiliado">Afiliado</Link>
+                <Link to="/login-profesional">Profesional</Link>
               </div>
             </div>
             <a href="#">Registrarse</a>
@@ -39,7 +40,7 @@ function Layout({ children, menuOpen, setMenuOpen }) {
             </div> 
           </div>
           <nav className={`nav ${menuOpen ? 'nav--open' : ''}`}>
-            <a href="#">Inicio</a>
+            <Link to="/">Inicio</Link>
             <a href="#">Nosotros</a>
             <div className="dropdown">
               <button className="dropdown-toggle">Servicios ▾</button>
