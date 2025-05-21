@@ -1,0 +1,56 @@
+.registro-admin-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.registro-form input,
+.registro-form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.registro-form button {
+  margin-top: 12px;
+  padding: 10px 15px;
+  background-color: #204080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabla-medicos {
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.tabla-medicos table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-medicos th, .tabla-medicos td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-medicos th {
+  background-color: #204080;
+  color: white;
+}
+
+.btn-eliminar {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}

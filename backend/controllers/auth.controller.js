@@ -1,3 +1,4 @@
+import db from '../config/db.js';
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import { buscarUsuarioPorDocumento, crearUsuarioPaciente } from '../models/usuarios.model.js'
@@ -24,3 +25,30 @@ export const registrarAfiliado = async (req, res) => {
 
   res.status(201).json({ message: 'Registro exitoso', token, usuario })
 }
+
+export const recuperarContrasena = async (req, res) => {
+  const { documento, email, nuevaContrasena } = req.body;
+
+  try {
+    const result = await db.query(
+      'SELECT id FROM usuarios WHERE documento = $1 AND email = $2',
+      [documento, email]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'No se encontró ningún usuario con esos datos.' });
+    }
+
+    const hash = await bcrypt.hash(nuevaContrasena, 10);
+
+    await db.query(
+      'UPDATE usuarios SET contrasena_hash = $1 WHERE documento = $2 AND email = $3',
+      [hash, documento, email]
+    );
+
+    res.json({ message: 'Contraseña actualizada correctamente' });
+  } catch (err) {
+    console.error('Error al recuperar contraseña:', err);
+    res.status(500).json({ message: 'Error del servidor' });
+  }
+};

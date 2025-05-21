@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import '../assets/css/loginAfiliado.css';
 
@@ -77,7 +78,8 @@ function LoginAfiliado() {
               />
               Recordarme
             </label>
-            <a href="#">¿Olvidó su contraseña?</a>
+            <Link to="/recuperan-contrasena">¿Olvidó su contraseña?</Link>
+
           </div>
 
           <button type="submit">Iniciar sesión</button>

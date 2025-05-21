@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 250px); /* espacio útil sin pisar footer */
+  min-height: calc(100vh - 250px); 
   padding: 2rem;
 }
 
@@ -58,3 +58,23 @@
 .registro-form button:hover {
   background-color: #163060;
 }
+
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.btn-cerrar-sesion {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #c9302c;
+}
+
