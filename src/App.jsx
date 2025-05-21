@@ -5,6 +5,7 @@ import LoginAfiliado from './pages/loginAfiliado'
 import LoginProfesional from './pages/loginProfesional'
 import RegistroAfiliado from './pages/registroAfiliado'
 import DashboardAfiliado from './pages/dashboardAfiliado'
+import RegistroMedico from './pages/registroMedico';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/login-profesional" element={<LoginProfesional />} />
       <Route path="/registro" element={<RegistroAfiliado />} />
       <Route path="/dashboard-afiliado" element={<DashboardAfiliado />} />
+    <Route path="/admin/registro-medico" element={<RegistroMedico />} />
     </Routes>
   )
 }

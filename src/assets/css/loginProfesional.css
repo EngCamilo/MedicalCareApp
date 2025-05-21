@@ -1,0 +1,83 @@
+/* === LOGIN PROFESIONAL === */
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 160px); /* Ajusta según tu header + footer */
+  padding: 2rem 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.login-form h2 {
+  color: #235091;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-form label {
+  align-self: flex-start;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.login-form .options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.login-form .options label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #777;
+}
+
+.login-form .options a {
+  color: #235091;
+  text-decoration: none;
+}
+
+.login-form .options a:hover {
+  text-decoration: underline;
+}
+
+.login-form button {
+  background-color: #235091;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #163a75;
+}

@@ -27,7 +27,7 @@ function Layout({ children, menuOpen, setMenuOpen }) {
                 <Link to="/login-profesional">Profesional</Link>
               </div>
             </div>
-            <a href="#">Registrarse</a>
+            <Link to="/registro">Registrarse</Link>
           </div>
         </div>
 
