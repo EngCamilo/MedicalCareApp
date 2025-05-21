@@ -5,7 +5,7 @@ import '../assets/css/global.css'
 import '../assets/css/home.css'
 import logo from '../assets/images/logo1.svg'
 import logoW from '../assets/images/LogoWhite_.svg'
-import doctorSideImg from '../assets/images/HomeBannerLarge.jpg'
+import doctorSideImg from '../assets/images/HomeBannerNew.jpg'
 
 function Layout({ children, menuOpen, setMenuOpen }) {
   return (
