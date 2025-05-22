@@ -6,7 +6,12 @@ import LoginProfesional from './pages/loginProfesional'
 import RegistroAfiliado from './pages/registroAfiliado'
 import DashboardAfiliado from './pages/dashboardAfiliado'
 import RegistroMedico from './pages/registroMedico';
+<<<<<<< HEAD
 import RecuperarContrasena from './pages/recuperarContrasena.jsx';
+=======
+import CitasMedicas from './pages/citas';
+
+>>>>>>> 1ec0762 (Actualización modulo citas)
 function App() {
   return (
     <Routes>
@@ -15,9 +20,14 @@ function App() {
       <Route path="/login-profesional" element={<LoginProfesional />} />
       <Route path="/registro" element={<RegistroAfiliado />} />
       <Route path="/dashboard-afiliado" element={<DashboardAfiliado />} />
+<<<<<<< HEAD
     <Route path="/admin/registro-medico" element={<RegistroMedico />} />
    <Route path="/recuperan-contrasena" element={<RecuperarContrasena />} />
 
+=======
+      <Route path="/admin/registro-medico" element={<RegistroMedico />} />
+      <Route path="/admin/citas-medicas" element={<CitasMedicas />} />
+>>>>>>> 1ec0762 (Actualización modulo citas)
     </Routes>
   )
 }

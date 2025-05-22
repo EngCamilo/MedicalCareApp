@@ -5,8 +5,6 @@ import Layout from '../components/LayoutDashboard'
 import citasIcon from '../assets/images/iconCalendar.png'
 import ordenesIcon from '../assets/images/iconOrden.png'
 import resultadosIcon from '../assets/images/iconResult.png'
-import { Link } from 'react-router-dom'
-import { FaHome, FaSyncAlt, FaSearch, FaList, FaUser, FaHeadset, FaBars } from 'react-icons/fa'
 
 function DashboardAfiliado() {
   const [menuOpen, setMenuOpen] = useState(false)

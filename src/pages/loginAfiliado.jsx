@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import '../assets/css/loginAfiliado.css';
+import '../assets/css/global.css';
 
 function LoginAfiliado() {
   const [documento, setDocumento] = useState('');
@@ -45,7 +46,7 @@ function LoginAfiliado() {
 
   return (
     <Layout>
-      <div className="login-form-wrapper">
+      <div className="login-form-wrapper"> 
         <form className="login-form" onSubmit={handleLogin}>
           <h2>¡Bienvenido!</h2>
 

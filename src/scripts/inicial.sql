@@ -1,6 +1,7 @@
 -- Crear base de datos 
 -- CREATE DATABASE saludplus_db;
 
+USE saludplus_db;
 
 -- 1. Tabla de usuarios
 CREATE TABLE usuarios (
