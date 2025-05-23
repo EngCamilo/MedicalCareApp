@@ -7,6 +7,9 @@ import RegistroAfiliado from './pages/registroAfiliado'
 import DashboardAfiliado from './pages/dashboardAfiliado'
 import RegistroMedico from './pages/registroMedico'
 import CitasMedicas from './pages/citas'
+import Nosotros from './pages/nosotros'
+import Afiliaciones from './pages/afiliaciones'
+import Contactenos from './pages/contactenos'
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
       <Route path="/dashboard-afiliado" element={<DashboardAfiliado />} />
       <Route path="/admin/registro-medico" element={<RegistroMedico />} />
       <Route path="/citas-medicas" element={<CitasMedicas />} />
+      <Route path="/nosotros" element={<Nosotros />} />
+      <Route path="/afiliaciones" element={<Afiliaciones />} />
+      <Route path="/contactenos" element={<Contactenos />} />
     </Routes>
   )
 }

@@ -1,0 +1,100 @@
+        h2 {
+          color: #235091;
+        }
+        .nosotros {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: stretch;
+          gap: 2rem;
+          padding: 3rem;
+          background-color: #f9fafa;
+          max-height: 100%;
+        }
+
+        .nosotros span {
+          font-weight: 800;
+          color: #235091;
+        }
+
+        .institucional {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+
+        .mision, .vision {
+          margin: 0.5rem auto;
+          max-width: 700px;
+          font-size: 1.1rem;
+          color: #444;
+        }
+
+        .sections {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .sections .trayectoria {
+          margin-bottom: 0;
+        }
+
+        .sections .timeline {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          max-width: 600px;
+        }
+
+        .sections .timeline-item {
+          background: #f4f9ff;
+          border-left: 4px solid #235091;
+          padding: 1rem;
+          border-radius: 4px;
+        }
+
+        .sections .timeline-year {
+          font-weight: bold;
+          color: #235091;
+        }
+
+        .sections .especialidades {
+          text-align: center;
+        }
+
+        .sections .especialidades-grid {
+          display: grid;
+          grid-template-columns:  50% 50%;
+          grid-template-rows: auto 1fr auto;
+          gap: 1.5rem;
+        }
+
+        .especialidad-card {
+          background: #ffffff;
+          padding: 1rem;
+          border: 1px solid #e0e0e0;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .especialidad-card img {
+          height: 40px;
+          margin-bottom: 0.5rem;
+        }
+
+        .especialidad-card h3 {
+          margin: 0;
+          font-size: 1rem;
+          color: #444;
+        }
+
+        @media (max-width: 768px) {
+          .nosotros {
+            padding: 1rem;
+          }
+
+          .mision, .vision {
+            font-size: 1rem;
+          }
+        }

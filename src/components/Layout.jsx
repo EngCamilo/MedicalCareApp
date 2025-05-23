@@ -41,7 +41,7 @@ function Layout({ children, menuOpen, setMenuOpen }) {
           </div>
           <nav className={`nav ${menuOpen ? 'nav--open' : ''}`}>
             <Link to="/">Inicio</Link>
-            <a href="#">Nosotros</a>
+            <a href="/nosotros">Nosotros</a>
             <div className="dropdown">
               <button className="dropdown-toggle">Servicios ▾</button>
               <div className="dropdown-menu">
@@ -50,8 +50,8 @@ function Layout({ children, menuOpen, setMenuOpen }) {
                 <a href="#">Resultados médicos</a>
               </div>
             </div>
-            <a href="#">Afiliaciones</a>
-            <a href="#">Contáctanos</a>
+            <a href="/afiliaciones">Afiliaciones</a>
+            <a href="/contactenos">Contáctanos</a>
           </nav>
           <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
             <a><i className="fas fa-bars"></i></a>
@@ -82,8 +82,8 @@ function Layout({ children, menuOpen, setMenuOpen }) {
           </div>
           <div className="footer__contact">
             <p><strong>WhatsApp:</strong> 310 134567</p>
-            <p><strong>Línea de atención:</strong> 601 134567</p>
-            <p><strong>Dirección:</strong> Cl 119 #22 - 18</p>
+            <p><strong>Línea de atención:</strong> 601 1345678</p>
+            <p><strong>Dirección:</strong> Cl 119 # 22 - 18</p>
             <p>Bogotá, Colombia</p>
           </div>
           <div className="footer__social">
