@@ -85,7 +85,7 @@ function LoginAfiliado() {
                 Recordarme
               </label>
               <button className="link-recuperar" onClick={() => setMostrarRecuperar(true)}>
-                ¿Olvidaste tu contraseña?
+                ¿Olvido su contraseña?
               </button>
 
               <ModalPasswordRec visible={mostrarRecuperar} onClose={() => setMostrarRecuperar(false)} />

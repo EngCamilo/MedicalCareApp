@@ -40,12 +40,12 @@ function ModalPasswordRec({ visible, onClose }) {
   return (
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal-contenido" onClick={e => e.stopPropagation()}>
-          <h2>Recuperar Contraseña</h2>
+          <h2>Recuperar contraseña</h2>
             <form onSubmit={handleSubmit}>
                 
                 <input
                 type="text"
-                placeholder="Documento"
+                placeholder="Número de documento"
                 value={documento}
                 onChange={(e) => setDocumento(e.target.value)}
                 required
