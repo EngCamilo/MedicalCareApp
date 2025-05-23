@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import '../assets/css/registroAfiliado.css';
 
 function RegistroAfiliado() {
+  const [menuOpen, setMenuOpen] = useState(false)
   const [nombre, setNombre] = useState('');
   const [tipoDocumento, setTipoDocumento] = useState('CC');
   const [documento, setDocumento] = useState('');
@@ -48,85 +49,102 @@ function RegistroAfiliado() {
   };
 
   return (
-    <Layout>
+    <Layout menuOpen={menuOpen} setMenuOpen={setMenuOpen}>
       <div className="registro-form-wrapper">
-        <form className="registro-form" onSubmit={handleRegistro}>
-          <h2>Registro de Afiliado</h2>
+        <div className='mainForm'>
+          <div className='cabForm'>
+            <h2>Registro de afiliado</h2>
+            <p>Si ya está afiliado y quiere acceder a nuestros servicios virtuales, por favor diligencie este formulario</p>
+          </div>
+          <form className="registro-form" onSubmit={handleRegistro}>
 
-          <label htmlFor="nombre">Nombre completo</label>
-          <input
-            type="text"
-            id="nombre"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            placeholder="Ingrese su nombre completo"
-            required
-          />
+            <label htmlFor="nombre">Nombre del afiliado</label>
+            <input
+              type="text"
+              id="nombre"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              placeholder="Ingrese su nombre completo"
+              required
+            />
 
-          <label htmlFor="tipoDocumento">Tipo de documento</label>
-          <select
-            id="tipoDocumento"
-            value={tipoDocumento}
-            onChange={(e) => setTipoDocumento(e.target.value)}
-          >
-            <option value="CC">Cédula</option>
-            <option value="TI">Tarjeta de Identidad</option>
-            <option value="CE">Cédula de Extranjería</option>
-            <option value="Pasaporte">Pasaporte</option>
-          </select>
+            <div className='rowPrin'>
+              <div className='colInter'>
+                <label htmlFor="tipoDocumento">Tipo de documento</label>
+                <select
+                  id="tipoDocumento"
+                  value={tipoDocumento}
+                  onChange={(e) => setTipoDocumento(e.target.value)}
+                >
+                  <option value="CC">Cédula</option>
+                  <option value="TI">Tarjeta de Identidad</option>
+                  <option value="CE">Cédula de Extranjería</option>
+                  <option value="Pasaporte">Pasaporte</option>
+                </select>
+              </div>
 
-          <label htmlFor="documento">Número de documento</label>
-          <input
-            type="text"
-            id="documento"
-            value={documento}
-            onChange={(e) => setDocumento(e.target.value)}
-            placeholder="Ingrese su número de documento"
-            required
-          />
+              <div className='colInter'>
+                <label htmlFor="documento">Número de documento</label>
+                <input
+                  type="text"
+                  id="documento"
+                  value={documento}
+                  onChange={(e) => setDocumento(e.target.value)}
+                  placeholder="Ingrese su número de documento"
+                  required
+                />
+              </div>
+            </div>
 
-          <label htmlFor="email">Correo electrónico</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="correo@ejemplo.com"
-            required
-          />
+            <label htmlFor="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Ej: correo@ejemplo.com"
+              required
+            />
 
-          <label htmlFor="telefono">Teléfono</label>
-          <input
-            type="tel"
-            id="telefono"
-            value={telefono}
-            onChange={(e) => setTelefono(e.target.value)}
-            placeholder="Ej: 3101234567"
-            required
-          />
+            <div className='rowPrin'>
+              <div className='colInter'>
+                <label htmlFor="telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  value={telefono}
+                  onChange={(e) => setTelefono(e.target.value)}
+                  placeholder="Ej: 3101234567"
+                  required
+                />
+              </div>
 
-          <label htmlFor="direccion">Dirección</label>
-          <input
-            type="text"
-            id="direccion"
-            value={direccion}
-            onChange={(e) => setDireccion(e.target.value)}
-            placeholder="Ej: Calle 123 #45-67"
-            required
-          />
+              <div className='colInter'>
+                <label htmlFor="direccion">Dirección</label>
+                <input
+                  type="text"
+                  id="direccion"
+                  value={direccion}
+                  onChange={(e) => setDireccion(e.target.value)}
+                  placeholder="Ej: Calle 123 #45-67"
+                  required
+                />
+              </div>
+            </div>
 
-          <label htmlFor="contrasena">Contraseña</label>
-          <input
-            type="password"
-            id="contrasena"
-            value={contrasena}
-            onChange={(e) => setContrasena(e.target.value)}
-            placeholder="Mínimo 6 caracteres"
-            required
-          />
+            <label htmlFor="contrasena">Contraseña</label>
+            <input
+              type="password"
+              id="contrasena"
+              value={contrasena}
+              onChange={(e) => setContrasena(e.target.value)}
+              placeholder="Mínimo 6 caracteres"
+              required
+            />
 
-          <button type="submit">Crear Cuenta</button>
-        </form>
+            <button type="submit">Crear cuenta</button>
+          </form>
+        </div>
       </div>
     </Layout>
   );

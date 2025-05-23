@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
-import '../assets/css/loginProfesional.css';
+import '../assets/css/login.css';
+import '../assets/css/global.css';
 
 function LoginProfesional() {
+  const [menuOpen, setMenuOpen] = useState(false)
   const [documento, setDocumento] = useState('');
   const [contrasena, setContrasena] = useState('');
   const [recordarme, setRecordarme] = useState(false);
@@ -46,45 +48,46 @@ function LoginProfesional() {
   };
 
   return (
-    <Layout>
+    <Layout menuOpen={menuOpen} setMenuOpen={setMenuOpen}>
       <div className="login-form-wrapper">
-        <form className="login-form" onSubmit={handleLogin}>
-          <h2>Acceso Profesional</h2>
+        <div className='mainForm'>
+          <h2><span>Solo si haces parte de nuestro equipo</span><br/>¡Bienvenido!</h2>
+          <form className="login-form" onSubmit={handleLogin}>
+            <label htmlFor="documento">Usuario</label>
+            <input
+              type="text"
+              id="documento"
+              value={documento}
+              onChange={(e) => setDocumento(e.target.value)}
+              placeholder="Ingrese con su documento"
+              required
+            />
 
-          <label htmlFor="documento">Número de documento</label>
-          <input
-            type="text"
-            id="documento"
-            value={documento}
-            onChange={(e) => setDocumento(e.target.value)}
-            placeholder="Ingrese su documento"
-            required
-          />
+            <label htmlFor="contrasena">Contraseña</label>
+            <input
+              type="password"
+              id="contrasena"
+              value={contrasena}
+              onChange={(e) => setContrasena(e.target.value)}
+              placeholder="Ingrese su contraseña"
+              required
+            />
 
-          <label htmlFor="contrasena">Contraseña</label>
-          <input
-            type="password"
-            id="contrasena"
-            value={contrasena}
-            onChange={(e) => setContrasena(e.target.value)}
-            placeholder="Ingrese su contraseña"
-            required
-          />
+            <div className="options">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={recordarme}
+                  onChange={(e) => setRecordarme(e.target.checked)}
+                />
+                Recordarme
+              </label>
+              <a href="#">¿Olvidó su contraseña?</a>
+            </div>
 
-          <div className="options">
-            <label>
-              <input
-                type="checkbox"
-                checked={recordarme}
-                onChange={(e) => setRecordarme(e.target.checked)}
-              />
-              Recordarme
-            </label>
-            <a href="#">¿Olvidó su contraseña?</a>
-          </div>
-
-          <button type="submit">Iniciar sesión</button>
-        </form>
+            <button type="submit">Iniciar sesión</button>
+          </form>
+        </div>
       </div>
     </Layout>
   );
