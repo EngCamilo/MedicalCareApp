@@ -1,16 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 # 🏥 MedicalCareApp / Proyecto Académico
 
 Aplicación web desarrollada para la gestión integral de un centro médico. Incluye funcionalidades para afiliados, médicos y personal administrativo con acceso a servicios virtuales como gestión de citas, historia clínica electrónica, órdenes médicas y más.
@@ -120,3 +107,31 @@ npm run dev
 ```bash
 npm run dev
 ```
+
+### 🧪 Pruebas y ejemplos
+
+Usa Postman para probar los endpoints /api/auth/login, /api/citas, /api/usuarios/me, etc.
+Usuarios y médicos deben estar registrados en la base de datos para probar el flujo completo.
+
+### ✨ Créditos
+
+Desarrollado por los estudiantes de Ingeniería de Software | Camilo Contreras, Jaider Abello y Brayan García 🧑‍💻
+Diseño gráfico y prototipado: Framer
+Contribuciones y sugerencias: ¡Bienvenidas!
+
+### 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
